@@ -1,0 +1,45 @@
+<html>
+
+<head>
+  <link href="css/menu.css" type="text/css" rel="stylesheet"/>
+</head>
+
+<body>
+<ion-side-menus enable-menu-with-back-views="false" >
+  <ion-side-menu-content>
+      <ion-nav-bar class="bar-stable">
+      //menu button and slide
+        <ion-nav-buttons side="left">
+          <a class="button button-icon button-outline ion-navicon" menu-toggle="left"></a>
+        </ion-nav-buttons>
+        //home button
+        <ion-nav-buttons side="right">
+          <a class="button icon-left ion-home" menu-close href="#/app/home"></a>
+        </ion-nav-buttons>
+      </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+      <ion-header-bar class="bar-stable headerBar">
+      <h1 class="title">Menu</h1>
+      <div class = "menuLogo"><img src=img/bristolLogo.png></div>
+      </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/home">
+          Home
+        </ion-item>
+        <ion-item menu-close href="#/app/jcr">
+          JCR
+        </ion-item>
+        <ion-item menu-close href="#/app/contactUs">
+          Contact Us
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+</body>
+
+</html>
