@@ -56,7 +56,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
 
 
-.controller('HomeCtrl', function($scope ) {
+.controller('HomeCtrl', function($scope, $ionicPopup) {
 
         $scope.cards = [
     {day:"Monday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 1},
@@ -86,8 +86,21 @@ angular.module('starter.controllers',['ui.bootstrap'])
         //else {
         //  mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
         //}
-          mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
 
+          var confirmPopup = $ionicPopup.confirm({
+              title: 'Open in browser',
+              cancelText: 'Cancel',
+              okText: 'Ok'
+          });
+          //
+          confirmPopup.then(function (res) {
+              if (res) {
+                  console.log('You are sure');
+                  window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
+              } else {
+                  console.log('You are not sure');
+              }
+          });
 
           return false;
       };
@@ -104,7 +117,22 @@ angular.module('starter.controllers',['ui.bootstrap'])
         //      document.getElementById(id.toString()).href = URL;
         //    })
 
-        window.open(URL, '_system', $location = 'no');
+
+          var confirmPopup = $ionicPopup.confirm({
+              title: 'Open in browser',
+              cancelText: 'Cancel',
+              okText: 'Ok'
+          });
+          //
+          confirmPopup.then(function (res) {
+              if (res) {
+                  console.log('You are sure');
+                  window.open(URL, '_system', $location = 'no');
+              } else {
+                  console.log('You are not sure');
+              }
+          });
+
         return false;
       };
 
@@ -114,45 +142,46 @@ angular.module('starter.controllers',['ui.bootstrap'])
 .controller('phoneCtrl', function($scope, $ionicPopup) {
 
         $scope.showConfirm = function(phoneNumber, id) {
-            console.log("hello");
-            window.open("tel:0117 928 7848");
+            //console.log("hello");
+            //window.open("tel:"+ phoneNumber);
+
+
+            var confirmPopup = $ionicPopup.confirm({
+                title: 'Call - ' + id,
+                template: phoneNumber,
+                cancelText: 'Cancel',
+                okText: 'Call'
+            });
+            //
+            confirmPopup.then(function (res) {
+                if (res) {
+                    console.log('You are sure');
+                    window.open("tel:"+ phoneNumber)
+                } else {
+                    console.log('You are not sure');
+                }
+            });
+
+
+
+
+            $scope.makeCall = function () {
+                var number = 3333322456;
+
+                var onSuccess = function (number) {
+
+                    alert("calling");
+                };
+
+                function onError(error) {
+                    alert('code: ' + error.code + '\n' +
+                    'message: ' + error.message + '\n');
+                }
+
+                window.plugins.CallNumber.callNumber(onSuccess, onError, number);
+
+            }
         }
-
-            //var confirmPopup = $ionicPopup.confirm({
-            //    title: 'Call - ' + id,
-            //    template: phoneNumber,
-            //    cancelText: 'Cancel',
-            //    okText: 'Call'
-            //});
-            //confirmPopup.then(function (res) {
-            //        if (res) {
-            //            console.log('You are sure');
-            //            window.open("tel:0117 928 7848")
-            //        } else {
-            //            console.log('You are not sure');
-            //        }
-            //    });
-            //};
-
-            //window.open("tel:0117 928 7848")
-
-
-        //$scope.makeCall= function (){
-        //    var number = 3333322456;
-        //
-        //    var onSuccess=function(number){
-        //
-        //        alert("calling");
-        //    };
-        //
-        //    function onError(error) {
-        //        alert('code: '    + error.code    + '\n' +
-        //        'message: ' + error.message + '\n');
-        //    }
-        //
-        //    window.plugins.CallNumber.callNumber(onSuccess, onError, number);
-        //
-        //}
 
 });
 
