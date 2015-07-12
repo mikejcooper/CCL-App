@@ -72,21 +72,24 @@ angular.module('starter.controllers',['ui.bootstrap'])
       $scope.changeLinkMaps = function (location){
         var devicePlatform = device.platform;
         var mapRoot = location + ", UK";
-        console.log(devicePlatform);
-        if(devicePlatform == "iOS"){
-          mapRoot = "maps:q=" + mapRoot;
-          document.getElementById("maps").href = mapRoot
-          document.getElementById("maps2").href = mapRoot
-        }
-        else if (devicePlatform == 'Android'){
-          mapRoot = "geo:0,0?q=" + mapRoot
-          document.getElementById("maps").href = mapRoot
-          document.getElementById("maps2").href = mapRoot
-        }
-        else {
+        //console.log(devicePlatform);
+        //if(devicePlatform == "iOS"){
+        //  mapRoot = "maps:q=" + mapRoot;
+        //  document.getElementById("maps").href = mapRoot
+        //  document.getElementById("maps2").href = mapRoot
+        //}
+        //else if (devicePlatform == 'Android'){
+        //  mapRoot = "geo:0,0?q=" + mapRoot
+        //  document.getElementById("maps").href = mapRoot
+        //  document.getElementById("maps2").href = mapRoot
+        //}
+        //else {
+        //  mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
+        //}
           mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
-        }
-        return false;
+
+
+          return false;
       };
 
       //Add to config.xml for appAvailability plugin ->>> <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
