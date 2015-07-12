@@ -85,9 +85,22 @@ img{
     margin-top: -45px;
     z-index: -1000;
 }
+.paddingLeft{
+    padding-left: 5px;
+}
 
-.venue{
-    padding-left: 2px;
+.venueTop{
     color: #963620;
     font-size: 13px;
+    text-decoration:none;
+    display : block;
+    padding-top: 2px;
+    padding-bottom: 4px;
+    padding-right: 4px;
+}
+.venueBottom{
+    font-size: 13px;
+    text-decoration:none;
+    display: block;
+    padding: 10px;
 }

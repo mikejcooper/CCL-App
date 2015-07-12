@@ -22,11 +22,11 @@
                     <div class="cardTop">
                         <div class="item item-thumbnail-left" href="#">
                             <a id = "avatar" ng-href="fb://profile/655146487898613Q" ng-click="changeLinkImages(card.avatarURL, 'avatar')"><span class="avatar"><img src={{card.avatarImg}}></span></a>
-                                <span class="cardTitle">{{card.title}}</span>
-                                <br/>
-                                <a id = "maps" ng-href="https://www.google.co.uk/maps/search/" ng-click="changeLinkMaps(card.location)" >
-                                    <i class="icon ion-ios-location custom-locationIcon"></i><span><a class="venue">{{card.venue}}</a></span>
-                                </a>
+                            <span class="cardTitle">{{card.title}}</span>
+                            <br/>
+                            <a class="venueTop" id = "maps" ng-href="https://www.google.co.uk/maps/search/" ng-click="changeLinkMaps(card.location)" >
+                                <i class="icon ion-ios-location custom-locationIcon"></i><span class = "paddingLeft">{{card.venue}}</span>
+                            </a>
                         </div>
                     </div>
                     <!-- Middle-->
@@ -44,13 +44,14 @@
                                 <i class="icon ion-clock"></i>
                                 {{card.date}}
                             </div>
-                            <a id = "maps2" ng-href="https://www.google.co.uk/maps/search/" ng-click="changeLinkMaps(card.location)" >
+                            <a class = "venueBottom" id = "maps2" ng-href="https://www.google.co.uk/maps/search/" ng-click="changeLinkMaps(card.location)" >
                                 <div class="item item-icon-left assertive">
                                     <i class="icon ion-ios-location"></i>
                                     {{card.location}}
                                 </div>
                             </a>
-                            </div>
+
+                        </div>
                     </div>
                 </div>
 
