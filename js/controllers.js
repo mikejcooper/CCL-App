@@ -76,8 +76,10 @@ angular.module('starter.controllers',['ui.bootstrap'])
   ];
       //Device selection for Maps integration.
       $scope.changeLinkMaps = function (location){
-        var devicePlatform = device.platform;
-        var mapRoot = location + ", UK";
+        //var devicePlatform = device.platform;
+
+          var mapRoot = location + ", UK";
+
         //console.log(devicePlatform);
         //if(devicePlatform == "iOS"){
         //  mapRoot = "maps:q=" + mapRoot;
@@ -102,7 +104,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
           confirmPopup.then(function (res) {
               if (res) {
                   console.log('You are sure');
-                  window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
+                  window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_blank', 'location=yes');
               } else {
                   console.log('You are not sure');
               }
@@ -133,7 +135,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
           confirmPopup.then(function (res) {
               if (res) {
                   console.log('You are sure');
-                  window.open(URL, '_system', $location = 'no');
+                  window.open(URL, '_blank', 'location=yes');
               } else {
                   console.log('You are not sure');
               }
