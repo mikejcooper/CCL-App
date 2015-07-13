@@ -11,7 +11,7 @@
     </ion-nav-buttons>
 
     <ion-content class = "homeFrame">
-        <ion-list>
+        <ion-list no-tap-scroll = "true">
 
             <ion-slide ng-controller="HomeCtrl as settings" ng-repeat="card in cards" href="#/app/home/{{card.id}}">
 
