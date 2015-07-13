@@ -135,7 +135,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
           confirmPopup.then(function (res) {
               if (res) {
                   console.log('You are sure');
-                  window.open(URL, '_blank', 'location=yes');
+                  window.open(URL, '_system', $location = 'no');
               } else {
                   console.log('You are not sure');
               }
