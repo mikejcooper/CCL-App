@@ -1,6 +1,12 @@
 var infoBoxOpened = false;
 angular.module('starter.controllers',['ui.bootstrap'])
 
+
+    .config(function($ionicConfigProvider) {
+        //ion-nav-bar (menu) center on android
+        $ionicConfigProvider.platform.android.navBar.alignTitle("center")
+    })
+
     .controller('AppCtrl', function($scope, $modal) {
         // UI bootstrap modal code
         $scope.showModal = function() {
