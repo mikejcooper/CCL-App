@@ -6,8 +6,7 @@ img{
 
 .homeFrame{
     padding-top: 30px;
-    buffer-bottom: 50px;
-
+    overflow: auto;
 }
 
 .card{
@@ -34,24 +33,6 @@ img{
     max-width: 55px;
     max-height: 60px;
 }
-
-/*.cardTitle{*/
-    /*border: 1px solid transparent;*/
-    /*font-size: 4.5vw;*/
-    /*font-weight: bold;*/
-    /*float: left;*/
-/*}*/
-/*.venue {*/
-    /*position: absolute;*/
-    /*border: 1px solid transparent;*/
-    /*font-size: 3.5vw;*/
-    /*margin-top: 0%;*/
-    /*/!*padding-left: 2px;*!/*/
-    /*color: #963620;*/
-    /*float: left;*/
-/*}*/
-
-
 
 .item-image{
     height: 100%;
@@ -105,4 +86,8 @@ img{
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 4px;
+}
+
+.invisible{
+    color: transparent;
 }

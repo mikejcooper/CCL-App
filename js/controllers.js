@@ -156,7 +156,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
             confirmPopup.then(function (res) {
                 if (res) {
                     console.log('You are sure');
-                    window.open("tel:"+ phoneNumber)
+                    window.open("tel:"+ phoneNumber, '_system', $location = 'no');
                 } else {
                     console.log('You are not sure');
                 }
