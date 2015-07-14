@@ -91,7 +91,8 @@ angular.module('starter.controllers',['ui.bootstrap'])
                     mapRoot = "http://maps.apple.com/?q=" + mapRoot;
                 }
                 else if (devicePlatform == 'Android'){
-                    mapRoot = "geo:" + mapRoot
+                    //mapRoot =
+                    window.open("geo:" + mapRoot, '_system', $location = 'no');
                 }
                 else {
                     mapRoot = "https://www.google.co.uk/maps/search/" + mapRoot;
