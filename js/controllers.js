@@ -88,15 +88,16 @@ angular.module('starter.controllers',['ui.bootstrap'])
             if (res) {
                 console.log('You are sure');
                 if(devicePlatform == "iOS"){
-                    mapRoot = "maps:q=" + mapRoot;
+                    mapRoot = "http://maps.apple.com/?q=" + mapRoot;
                 }
                 else if (devicePlatform == 'Android'){
-                    mapRoot = "geo:0,0?q=" + mapRoot
+                    mapRoot = "geo:" + mapRoot
                 }
                 else {
                     mapRoot = "https://www.google.co.uk/maps/search/" + mapRoot;
                 }
                 openLink(mapRoot);
+                console.log('HERE');
               }
               else {
                 console.log('You are not sure');
@@ -163,22 +164,22 @@ angular.module('starter.controllers',['ui.bootstrap'])
             });
 
 
-            //$scope.makeCall = function () {
-            //    var number = 3333322456;
-            //
-            //    var onSuccess = function (number) {
-            //
-            //        alert("calling");
-            //    };
-            //
-            //    function onError(error) {
-            //        alert('code: ' + error.code + '\n' +
-            //        'message: ' + error.message + '\n');
-            //    }
-            //
-            //    window.plugins.CallNumber.callNumber(onSuccess, onError, number);
-            //
-            //}
+            $scope.makeCall = function () {
+                var number = 3333322456;
+
+                var onSuccess = function (number) {
+
+                    alert("calling");
+                };
+
+                function onError(error) {
+                    alert('code: ' + error.code + '\n' +
+                    'message: ' + error.message + '\n');
+                }
+
+                window.plugins.CallNumber.callNumber(onSuccess, onError, number);
+
+            }
         }
 
 });
@@ -188,14 +189,15 @@ var openLink = function (URL){
     var devicePlatform = device.platform;
 
     if(devicePlatform == "iOS"){
-        mapRoot = window.open(URL, '_system', $location = 'no');
+        window.open(URL, '_system', $location = 'no');
     }
     else if (devicePlatform == 'Android'){
         navigator.app.loadUrl(URL, { openExternal:true });
     }
     else {
-        mapRoot = window.open(URL, '_system', $location = 'no');
+        window.open(URL, '_system', $location = 'no');
     }
+    console.log('LINK opened');
 
     return false;
 };
