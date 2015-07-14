@@ -80,6 +80,21 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
           var mapRoot = location + ", UK";
 
+        //console.log(devicePlatform);
+        //if(devicePlatform == "iOS"){
+        //  mapRoot = "maps:q=" + mapRoot;
+        //  document.getElementById("maps").href = mapRoot
+        //  document.getElementById("maps2").href = mapRoot
+        //}
+        //else if (devicePlatform == 'Android'){
+        //  mapRoot = "geo:0,0?q=" + mapRoot
+        //  document.getElementById("maps").href = mapRoot
+        //  document.getElementById("maps2").href = mapRoot
+        //}
+        //else {
+        //  mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
+        //}
+
           var confirmPopup = $ionicPopup.confirm({
               title: 'Open in browser',
               cancelText: 'Cancel',
