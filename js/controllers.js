@@ -76,7 +76,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
   ];
       //Device selection for Maps integration.
       $scope.changeLinkMaps = function (location){
-        var devicePlatform = device.platform;
+        var devicePlatform = device.model;
         var mapRoot = location + ", UK";
         var confirmPopup = $ionicPopup.confirm({
               title: 'Open in browser',
