@@ -76,7 +76,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
   ];
       //Device selection for Maps integration.
       $scope.changeLinkMaps = function (location){
-        var devicePlatform = device.platform;
+        //var devicePlatform = device.platform;
         var mapRoot = location + ", UK";
         var confirmPopup = $ionicPopup.confirm({
               title: 'Open in browser',
@@ -87,18 +87,20 @@ angular.module('starter.controllers',['ui.bootstrap'])
         confirmPopup.then(function (res) {
             if (res) {
                 console.log('You are sure');
-                if(devicePlatform == "iOS"){
-                    mapRoot = "maps:q=" + mapRoot;
-                    mapRoot = window.open(mapRoot, '_system', $location = 'no');
-                }
-                else if (devicePlatform == 'Android'){
-                    mapRoot = "geo:0,0?q=" + mapRoot
-                    navigator.app.loadUrl(mapRoot, { openExternal:true });
-                }
-                else {
-                      mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
-                }
-              }
+                //if(devicePlatform == "iOS"){
+                //    mapRoot = "maps:q=" + mapRoot;
+                //    mapRoot = window.open(mapRoot, '_system', $location = 'no');
+                //}
+                //else if (devicePlatform == 'Android'){
+                //    mapRoot = "geo:0,0?q=" + mapRoot
+                //    navigator.app.loadUrl(mapRoot, { openExternal:true });
+                //}
+                //else {
+                //      mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
+                //}
+                navigator.app.loadUrl(mapRoot, { openExternal:true });
+
+            }
               else {
                   console.log('You are not sure');
               }
