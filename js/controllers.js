@@ -76,7 +76,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
   ];
       //Device selection for Maps integration.
       $scope.changeLinkMaps = function (location){
-        var devicePlatform = device.model;
+        var devicePlatform = device.platform;
         var mapRoot = location + ", UK";
 
         var confirmPopup = $ionicPopup.confirm({
@@ -164,29 +164,29 @@ angular.module('starter.controllers',['ui.bootstrap'])
             });
 
 
-            $scope.makeCall = function () {
-                var number = 3333322456;
-
-                var onSuccess = function (number) {
-
-                    alert("calling");
-                };
-
-                function onError(error) {
-                    alert('code: ' + error.code + '\n' +
-                    'message: ' + error.message + '\n');
-                }
-
-                window.plugins.CallNumber.callNumber(onSuccess, onError, number);
-
-            }
+            //$scope.makeCall = function () {
+            //    var number = 3333322456;
+            //
+            //    var onSuccess = function (number) {
+            //
+            //        alert("calling");
+            //    };
+            //
+            //    function onError(error) {
+            //        alert('code: ' + error.code + '\n' +
+            //        'message: ' + error.message + '\n');
+            //    }
+            //
+            //    window.plugins.CallNumber.callNumber(onSuccess, onError, number);
+            //
+            //}
         }
 
 });
 
 var openLink = function (URL){
 
-    var devicePlatform = device.model;
+    var devicePlatform = device.platform;
 
     if(devicePlatform == "iOS"){
         window.open(URL, '_system', $location = 'no');
