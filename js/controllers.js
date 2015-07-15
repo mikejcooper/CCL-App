@@ -78,39 +78,36 @@ angular.module('starter.controllers',['ui.bootstrap'])
       $scope.changeLinkMaps = function (location){
         var devicePlatform = device.model;
         var mapRoot = location + ", UK";
+
         var confirmPopup = $ionicPopup.confirm({
               title: 'Open in browser',
               cancelText: 'Cancel',
               okText: 'Ok'
         });
-
         confirmPopup.then(function (res) {
             if (res) {
                 console.log('You are sure');
-                //if(devicePlatform == "iOS"){
-                //    mapRoot = "maps:q=" + mapRoot;
-                //    mapRoot = window.open(mapRoot, '_system', $location = 'no');
-                //}
-                //else if (devicePlatform == 'Android'){
-                //    mapRoot = "geo:0,0?q=" + mapRoot
-                //    navigator.app.loadUrl(mapRoot, { openExternal:true });
-                //}
-                //else {
-                //      mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
-                //}
-                navigator.app.loadUrl(mapRoot, { openExternal:true });
-
-            }
+                if(devicePlatform == "iOS"){
+                    mapRoot = "http://maps.apple.com/?q=" + mapRoot;
+                }
+                else if (devicePlatform == 'Android'){
+                    mapRoot = "geo:" + mapRoot;
+                }
+                else {
+                    mapRoot = "https://www.google.co.uk/maps/search/" + mapRoot;
+                }
+                openLink(mapRoot);
+                console.log('HERE');
+              }
               else {
-                  console.log('You are not sure');
+                console.log('You are not sure');
               }
           });
-
           return false;
       };
 
       //Add to config.xml for appAvailability plugin ->>> <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
-      $scope.changeLinkImages = function(URL, id){
+      $scope.changeLinkImages = function(URL){
           console.log("here");
         //var scheme  = 'fb://';
         //appAvailability.check(scheme,       // URI Scheme or Package Name
@@ -131,8 +128,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
           confirmPopup.then(function (res) {
               if (res) {
                   console.log('You are sure');
-                  navigator.app.loadUrl('https://google.com/', { openExternal:true });
-                  //window.open(URL, '_system', $location = 'no');
+                  openLink(URL);
               } else {
                   console.log('You are not sure');
               }
@@ -161,13 +157,11 @@ angular.module('starter.controllers',['ui.bootstrap'])
             confirmPopup.then(function (res) {
                 if (res) {
                     console.log('You are sure');
-                    window.open("tel:"+ phoneNumber, '_system', $location = 'no');
+                    openLink("tel:"+ phoneNumber);
                 } else {
                     console.log('You are not sure');
                 }
             });
-
-
 
 
             $scope.makeCall = function () {
@@ -189,5 +183,23 @@ angular.module('starter.controllers',['ui.bootstrap'])
         }
 
 });
+
+var openLink = function (URL){
+
+    var devicePlatform = device.model;
+
+    if(devicePlatform == "iOS"){
+        window.open(URL, '_system', $location = 'no');
+    }
+    else if (devicePlatform == 'Android'){
+        navigator.app.loadUrl(URL, { openExternal:true });
+    }
+    else {
+        window.open(URL, '_system', $location = 'no');
+    }
+    console.log('LINK opened');
+
+    return false;
+};
 
 
