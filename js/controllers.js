@@ -76,36 +76,30 @@ angular.module('starter.controllers',['ui.bootstrap'])
   ];
       //Device selection for Maps integration.
       $scope.changeLinkMaps = function (location){
-        //var devicePlatform = device.platform;
-
-          var mapRoot = location + ", UK";
-
-        //console.log(devicePlatform);
-        //if(devicePlatform == "iOS"){
-        //  mapRoot = "maps:q=" + mapRoot;
-        //  document.getElementById("maps").href = mapRoot
-        //  document.getElementById("maps2").href = mapRoot
-        //}
-        //else if (devicePlatform == 'Android'){
-        //  mapRoot = "geo:0,0?q=" + mapRoot
-        //  document.getElementById("maps").href = mapRoot
-        //  document.getElementById("maps2").href = mapRoot
-        //}
-        //else {
-        //  mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
-        //}
-
-          var confirmPopup = $ionicPopup.confirm({
+        var devicePlatform = device.platform;
+        var mapRoot = location + ", UK";
+        var confirmPopup = $ionicPopup.confirm({
               title: 'Open in browser',
               cancelText: 'Cancel',
               okText: 'Ok'
-          });
-          //
-          confirmPopup.then(function (res) {
-              if (res) {
-                  console.log('You are sure');
-                  navigator.app.loadUrl('https://google.com/', { openExternal:true });
-              } else {
+        });
+
+        confirmPopup.then(function (res) {
+            if (res) {
+                console.log('You are sure');
+                if(devicePlatform == "iOS"){
+                    mapRoot = "maps:q=" + mapRoot;
+                    mapRoot = window.open(mapRoot, '_system', $location = 'no');
+                }
+                else if (devicePlatform == 'Android'){
+                    mapRoot = "geo:0,0?q=" + mapRoot
+                    navigator.app.loadUrl(mapRoot, { openExternal:true });
+                }
+                else {
+                      mapRoot = window.open("https://www.google.co.uk/maps/search/" + mapRoot, '_system', $location = 'no');
+                }
+              }
+              else {
                   console.log('You are not sure');
               }
           });
