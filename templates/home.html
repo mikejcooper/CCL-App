@@ -34,11 +34,11 @@
                         </div>
                     </div>
                     <!-- Middle-->
-                    <div class="item item-image">
+                    <div class="item item-image coverDiv">
                         <a id = "cover" ng-href="" ng-click = "changeLinkImages(card.coverURL, 'cover')"><span class="cardBottomImage"><img src={{card.coverImg}}></span></a>
                     </div>
                     <!--dropdown list-->
-                    <button class="button button-clear button-positive button-small" ng-click="isCollapsed = !isCollapsed">
+                    <button class="button button-clear button-positive button-small moreButton" ng-click="isCollapsed = !isCollapsed">
                         <i class="icon custom-locationIcon" ng-class="isCollapsed ? 'ion-plus' : 'ion-minus'"></i>
                         More
                     </button>

@@ -91,7 +91,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
                     mapRoot = "http://maps.apple.com/?q=" + mapRoot;
                 }
                 else if (devicePlatform == 'Android'){
-                    mapRoot = "geo:" + mapRoot;
+                    mapRoot = "geo:0,0?q=" + mapRoot;
                 }
                 else {
                     mapRoot = "https://www.google.co.uk/maps/search/" + mapRoot;
@@ -108,11 +108,11 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
       //Add to config.xml for appAvailability plugin ->>> <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
       $scope.changeLinkImages = function(URL){
-          console.log("here");
+          //console.log("here");
         //var scheme  = 'fb://';
         //appAvailability.check(scheme,       // URI Scheme or Package Name
         //    function() {  // Success callback - application installed
-        //      document.getElementById(id.toString()).href = "fb://" + URLNative;
+        //      document.getElementById(id.toString()).href = "fb://" + URL;
         //    },
         //    function() {  // Error callback
         //      document.getElementById(id.toString()).href = URL;
@@ -162,24 +162,6 @@ angular.module('starter.controllers',['ui.bootstrap'])
                     console.log('You are not sure');
                 }
             });
-
-
-            //$scope.makeCall = function () {
-            //    var number = 3333322456;
-            //
-            //    var onSuccess = function (number) {
-            //
-            //        alert("calling");
-            //    };
-            //
-            //    function onError(error) {
-            //        alert('code: ' + error.code + '\n' +
-            //        'message: ' + error.message + '\n');
-            //    }
-            //
-            //    window.plugins.CallNumber.callNumber(onSuccess, onError, number);
-            //
-            //}
         }
 
 });

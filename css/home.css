@@ -2,6 +2,9 @@ img{
     display: block;
     max-height: 100%;
     max-width: 100%;
+    width:100%;
+    height:auto;
+
 }
 
 .homeFrame{
@@ -90,4 +93,10 @@ img{
 
 .invisible{
     color: transparent;
+}
+
+.moreButton{
+    display : block;
+    padding:3px;
+    padding-right: 80%;
 }
