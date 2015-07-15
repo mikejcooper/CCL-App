@@ -1,15 +1,23 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<widget id="com.ionicframework.myapp625152" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://java.sun.com/JSP/Page">
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns = "http://www.w3.org/ns/widgets"
+
+        xmlns:gap   = "http://phonegap.com/ns/1.0"
+        id          = "com.phonegap.example"
+        version     = "1.0.0"
+        versionCode = "10" >
+
+  <!-- versionCode is optional and Android only -->
+
+  <preference name="phonegap-version" value="3.5.0" />
   <name>CCL-Freshers</name>
   <description>
-        An Ionic Framework and Cordova project.
+        Bristol University Freshers Week Project - City Centre Living
     </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
+  <author email="mc14641@bris.ac.uk">
+Michael Cooper
+  </author>
   <content src="index.html"/>
 
-  <gap:plugin name="org.apache.cordova.device" />
   <access origin="*" launch-external="yes"/>
   <preference name="webviewbounce" value="false"/>
   <preference name="UIWebViewBounce" value="false"/>
