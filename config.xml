@@ -9,7 +9,7 @@
   <!-- versionCode is optional and Android only -->
 
   <preference name="phonegap-version" value="3.5.0" />
-  <name>CCL-Freshers</name>
+  <name>CCL-FreshersTrial</name>
   <description>
         Bristol University Freshers Week Project - City Centre Living
     </description>
