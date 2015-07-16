@@ -64,15 +64,17 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
 .controller('HomeCtrl', function($scope, $ionicPopup) {
 
+        $scope.isCollapsed = true;
+
         $scope.cards = [
     {day:"Monday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 1},
     {day:"Tuesday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "yes"},
     {day:"Wednesday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
     {day:"Thursday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-    {day:"Monday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 5},
-    {day:"Tuesday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "no"},
-    {day:"Wednesday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-    {day:"Thursday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"}
+    {day:"Friday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 5},
+    {day:"Saturday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "no"},
+    {day:"Sunday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
+    {day:"Monday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"}
   ];
       //Device selection for Maps integration.
       $scope.changeLinkMaps = function (location){
@@ -136,8 +138,6 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
         return false;
       };
-
-      $scope.isCollapsed = true;
 })
 
 .controller('phoneCtrl', function($scope, $ionicPopup) {

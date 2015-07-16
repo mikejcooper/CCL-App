@@ -4,8 +4,9 @@ img{
     max-width: 100%;
     width:100%;
     height:auto;
-
 }
+
+
 
 .homeFrame{
     padding-top: 45px;
@@ -26,6 +27,7 @@ img{
 .cardTitle{
     font-size: 2.6vh;
     font-weight: bold;
+
 }
 
 

@@ -5,13 +5,16 @@
     font-size: 20px;
 }
 
-.modal {
-    text-align: center;
-}
+
+
+/*.modal {*/
+    /*text-align: center;*/
+/*}*/
 
 .modal:before {
     display: inline-block;
     vertical-align: middle;
+    horiz-align: center;
     content: " ";
     height: 100%;
 }
@@ -20,6 +23,7 @@
     display: inline-block;
     text-align: left;
     vertical-align: middle;
+    horiz-align: center;
 }
 
 .center-modal {
@@ -28,7 +32,7 @@
     padding-top: 60px;
     padding-bottom: 30%
     z-index: 1050;
-    width: 100%;
+    max-width: 100%;
     height: 80%;
     background: transparent;
 }

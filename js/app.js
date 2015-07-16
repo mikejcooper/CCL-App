@@ -39,6 +39,24 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.bootstrap'])
       }
     }
   })
+      .state('app.homeAlternative1', {
+    url: "/homeAlternative1",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/homeAlternative1.html",
+        controller: 'HomeCtrl'
+      }
+    }
+  })
+      .state('app.homeAlternative2', {
+    url: "/homeAlternative2",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/homeAlternative2.html",
+        controller: 'HomeCtrl'
+      }
+    }
+  })
 
   .state('app.contactUs', {
     url: "/contactUs",
