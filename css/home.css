@@ -6,6 +6,14 @@ img{
     height:auto;
 }
 
+.coverIcon{
+    position:absolute;
+    left:2%;
+    top:83%;
+}
+.custom-icon{
+    color:white;
+}
 
 
 .homeFrame{
@@ -21,7 +29,7 @@ img{
 
 .cardTop{
     position: relative;
-    height: 70px;
+    height: 65px;
 }
 
 .cardTitle{
@@ -53,8 +61,8 @@ img{
 
 .cardCalendar{
     position: absolute;
-    top: 15px;
-    left: 15px;
+    top: 0%;
+    left: 3%;
     font-size: 25px !important;
     overflow: hidden;
 }
@@ -62,17 +70,21 @@ img{
 .cardDay {
     font-size: 25px;
     position: absolute;
-    top: 15px;
-    left: 45px;
+    top: 2%;
+    left: 10%;
 }
 .reduceDiv{
     border: transparent;
-    margin-bottom: -60px;
-    margin-top: -45px;
+    background: transparent;
+    margin-bottom: -23%;
+    margin-top: -4%;
     z-index: -1000;
 }
 .paddingLeft{
-    padding-left: 5px;
+    padding-left: 7px;
+}
+.paddingLeft2{
+    padding-left: 3px;
 }
 
 .venueTop{
@@ -83,6 +95,15 @@ img{
     padding-top: 2px;
     padding-bottom: 8px;
     padding-right: 2px;
+
+}
+
+.venueTopRight{
+    position: absolute;
+    margin-top: -4.5%;
+    margin-left: 54%;
+    font-size: 13px;
+
 }
 .venueBottom{
     font-size: 13px;
@@ -101,4 +122,9 @@ img{
     display : block;
     padding:3px;
     padding-right: 80%;
+}
+.facebookIcon{
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }

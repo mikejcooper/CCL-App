@@ -11,15 +11,18 @@
     </ion-nav-buttons>
 
     <ion-content class = "homeFrame">
-        <ion-list>
-
-            <ion-slide ng-controller="HomeCtrl as settings" ng-repeat="card in cards" href="#/app/home/{{card.id}}">
 
 
-                <div class="background reduceDiv item item-thumbnail-left" href="#">
-                    <i class="icon ion-ios-calendar-outline cardCalendar"></i>
-                    <div class="cardDay">{{card.day}}</div>
-                </div>
+        <ion-list ng-controller="HomeCtrl as settings" ng-repeat="day in days" href="#/app/home/{{}}">
+            <div class="background reduceDiv item item-thumbnail-left" href="#">
+                <i class="icon ion-ios-calendar-outline cardCalendar"></i>
+                <div class="cardDay">{{day.day}}</div>
+            </div>
+            <ion-slide-box>
+            <ion-slide ng-controller="HomeCtrl as settings" ng-repeat="card in day.events" href="#/app/home/{{}}">
+
+
+
                 <div class="card">
 
                     <!-- Top-->
@@ -31,11 +34,15 @@
                             <a class="venueTop" id = "maps" ng-click="changeLinkMaps(card.location)" >
                                 <i class="icon ion-ios-location custom-locationIcon"></i><span class = "paddingLeft">{{card.venue}}</span>
                             </a>
+                            <a class="venueTopRight" id = "time">
+                                <i class="icon ion-clock"></i><span class = "paddingLeft2">{{card.time}}</span>
+                            </a>
                         </div>
                     </div>
                     <!-- Middle-->
                     <div class="item item-image coverDiv">
                         <a id = "cover" ng-href="" ng-click = "changeLinkImages(card.coverURL, 'cover')"><span class="cardBottomImage"><img src={{card.coverImg}}></span></a>
+                        <i class="icon custom-icon coverIcon ion-social-facebook"></i>
                     </div>
                     <!--dropdown list-->
                     <button class="button button-clear button-positive button-small moreButton" ng-click="isCollapsed = !isCollapsed">
@@ -44,8 +51,8 @@
                     </button>
                     <div collapse="isCollapsed">
                         <div>
-                            <div class="item item-icon-left assertive">
-                                <i class="icon ion-clock"></i>
+                            <div class="item item-icon-left assertive" ng-click = "calendarEvent()">
+                                <i class="icon ion-calendar"></i>
                                 {{card.date}}
                             </div>
                             <a class = "venueBottom" id = "maps2" ng-click="changeLinkMaps(card.location)" >
@@ -61,7 +68,7 @@
 
 
             </ion-slide>
-
+            </ion-slide-box>
         </ion-list>
 
         <div class = "invisible">hello<br/></div>

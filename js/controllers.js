@@ -65,17 +65,201 @@ angular.module('starter.controllers',['ui.bootstrap'])
 .controller('HomeCtrl', function($scope, $ionicPopup) {
 
         $scope.isCollapsed = true;
+  //
+  //      $scope.cards = [
+  //  {day:"Monday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 1},
+  //  {day:"Tuesday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "yes"},
+  //  {day:"Wednesday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
+  //  {day:"Thursday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
+  //  {day:"Friday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 5},
+  //  {day:"Saturday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "no"},
+  //  {day:"Sunday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
+  //  {day:"Monday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"}
+  //];
 
-        $scope.cards = [
-    {day:"Monday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 1},
-    {day:"Tuesday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "yes"},
-    {day:"Wednesday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-    {day:"Thursday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-    {day:"Friday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 5},
-    {day:"Saturday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "no"},
-    {day:"Sunday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-    {day:"Monday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"}
-  ];
+
+
+
+        $scope.days = {
+            day1: {
+                day: "Monday",
+                events: {
+                    event1: {
+                        title: 'Bristol Freshers',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/1.png",
+                        location: "Univerity of Bristol Campus",
+                        venue: "Anson Rooms",
+                        date: "27th Sep - 4th Oct",
+                        time:'09:00',
+                        coverURL: "https://www.facebook.com/events/971419459536809/",
+                        avatarURL: "http://www.bris.ac.uk/"
+                    },
+                    event2: {
+                        title: 'Sciences vs Arts Bar Crawl',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/2.jpg",
+                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
+                        venue: "Pryzm Nightclub",
+                        date: "Tuesday 6 October",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/1556319957955080/",
+                        avatarURL: "http://www.bris.ac.uk/",
+                        additionalEventOccurrence: "yes"
+                    },
+                    event3: {
+                        title: 'Arcadia Bristol',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/3.jpg",
+                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
+                        venue: "Queen Square, Bristol",
+                        date: "4th - 5th September",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/865692610181537/",
+                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
+                        additionalEventOccurrence: "no"
+                    }
+                }
+            },
+
+            day2: {
+                day: "Tuesday",
+                events: {
+                    event1: {
+                        title: 'Bristol Freshers',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/1.png",
+                        location: "Univerity of Bristol Campus",
+                        venue: "Anson Rooms",
+                        date: "27th Sep - 4th Oct",
+                        time:'09:00',
+                        coverURL: "https://www.facebook.com/events/971419459536809/",
+                        avatarURL: "http://www.bris.ac.uk/"
+                    },
+                    event2: {
+                        title: 'Sciences vs Arts Bar Crawl',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/2.jpg",
+                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
+                        venue: "Pryzm Nightclub",
+                        date: "Tuesday 6 October",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/1556319957955080/",
+                        avatarURL: "http://www.bris.ac.uk/",
+                        additionalEventOccurrence: "yes"
+                    },
+                    event3: {
+                        title: 'Arcadia Bristol',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/3.jpg",
+                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
+                        venue: "Queen Square, Bristol",
+                        date: "4th - 5th September",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/865692610181537/",
+                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
+                        additionalEventOccurrence: "no"
+                    }
+                }
+            },
+
+            day3: {
+                day: "Wednesday",
+                events: {
+                    event1: {
+                        title: 'Bristol Freshers',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/1.png",
+                        location: "Univerity of Bristol Campus",
+                        venue: "Anson Rooms",
+                        date: "27th Sep - 4th Oct",
+                        time:'09:00',
+                        coverURL: "https://www.facebook.com/events/971419459536809/",
+                        avatarURL: "http://www.bris.ac.uk/"
+                    },
+                    event2: {
+                        title: 'Sciences vs Arts Bar Crawl',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/2.jpg",
+                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
+                        venue: "Pryzm Nightclub",
+                        date: "Tuesday 6 October",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/1556319957955080/",
+                        avatarURL: "http://www.bris.ac.uk/",
+                        additionalEventOccurrence: "yes"
+                    },
+                    event3: {
+                        title: 'Arcadia Bristol',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/3.jpg",
+                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
+                        venue: "Queen Square, Bristol",
+                        date: "4th - 5th September",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/865692610181537/",
+                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
+                        additionalEventOccurrence: "no"
+                    }
+                }
+            },
+
+            day4: {
+                day: "Thursday",
+                events: {
+                    event1: {
+                        title: 'Bristol Freshers',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/1.png",
+                        location: "Univerity of Bristol Campus",
+                        venue: "Anson Rooms",
+                        date: "27th Sep - 4th Oct",
+                        time:'09:00',
+                        coverURL: "https://www.facebook.com/events/971419459536809/",
+                        avatarURL: "http://www.bris.ac.uk/"
+                    },
+                    event2: {
+                        title: 'Sciences vs Arts Bar Crawl',
+                        avatarImg: "img/bristolLogo.png",
+                        coverImg: "events/2.jpg",
+                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
+                        venue: "Pryzm Nightclub",
+                        date: "Tuesday 6 October",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/1556319957955080/",
+                        avatarURL: "http://www.bris.ac.uk/",
+                        additionalEventOccurrence: "yes"
+                    },
+                    event3: {
+                        title: 'Arcadia Bristol',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/3.jpg",
+                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
+                        venue: "Queen Square, Bristol",
+                        date: "4th - 5th September",
+                        time:'22:00',
+                        coverURL: "https://www.facebook.com/events/865692610181537/",
+                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
+                        additionalEventOccurrence: "no"
+                    }
+                }
+            }
+
+        };
+
+
+
+  //          $scope.Monday = [
+  //  {title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 1},
+  //  {title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "yes"},
+  //  {title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
+  //];
+
+
+
+
+
+
       //Device selection for Maps integration.
       $scope.changeLinkMaps = function (location){
         var devicePlatform = device.platform;
@@ -138,6 +322,40 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
         return false;
       };
+
+        $scope.calendarEvent = function() {
+
+            var confirmPopup = $ionicPopup.confirm({
+                title: 'Create Calendar Event?',
+                cancelText: 'Cancel',
+                okText: 'Ok'
+            });
+            //
+            confirmPopup.then(function (res) {
+                if (res) {
+                    console.log('You are sure');
+                    createCalendarEvent();
+                } else {
+                    console.log('You are not sure');
+                }
+            });
+
+            createCalendarEvent = function() {
+
+                var startDate = new Date("July 25, 2015 13:00:00");
+                var endDate = new Date("July 25, 2015 14:30:00");
+                var title = "My nice event";
+                var location = "Home";
+                var notes = "Some notes about this event.";
+
+                // create (the only function also supported on Android for now)
+                window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+            }
+
+        }
+
+
+
 })
 
 .controller('phoneCtrl', function($scope, $ionicPopup) {
