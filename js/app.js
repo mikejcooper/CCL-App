@@ -36,8 +36,6 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.bootstrap'])
 
 
 
-
-
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 

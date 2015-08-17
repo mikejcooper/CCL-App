@@ -8,6 +8,10 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
 
 .controller('AppCtrl', function($scope, $modal) {
+
+
+
+
         // UI bootstrap modal code
         $scope.showModal = function() {
 
