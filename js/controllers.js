@@ -7,7 +7,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
     })
 
 
-    .controller('AppCtrl', function($scope, $modal) {
+.controller('AppCtrl', function($scope, $modal) {
         // UI bootstrap modal code
         $scope.showModal = function() {
 
@@ -60,25 +60,78 @@ angular.module('starter.controllers',['ui.bootstrap'])
 })
 
 
+.controller('HallCtrl', function($scope, $ionicPopup) {
 
+        $scope.halls = {
+            1: {
+                name: "Goldney",
+                imgURL: "hallsIMG/1.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/goldney/"
+            },
+            2: {
+                name: "Clifton Hill House",
+                imgURL: "hallsIMG/2.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
+            },
+            3: {
+                name: "Goldney",
+                imgURL: "hallsIMG/1.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/goldney/"
+            },
+            4: {
+                name: "Clifton Hill House",
+                imgURL: "hallsIMG/2.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
+            },
+            5: {
+                name: "Goldney",
+                imgURL: "hallsIMG/1.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/goldney/"
+            },
+            6: {
+                name: "Clifton Hill House",
+                imgURL: "hallsIMG/2.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
+            },
+            7: {
+                name: "Goldney",
+                imgURL: "hallsIMG/1.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/goldney/"
+            },
+            8: {
+                name: "Clifton Hill House",
+                imgURL: "hallsIMG/2.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
+            }
+
+
+        };
+
+        $scope.openLink = function(URL){
+
+            var confirmPopup = $ionicPopup.confirm({
+                title: 'Open UoB Website?',
+                cancelText: 'Cancel',
+                okText: 'Ok'
+            });
+            //
+            confirmPopup.then(function (res) {
+                if (res) {
+                    console.log('You are sure');
+                    openLink(URL);
+                } else {
+                    console.log('You are not sure');
+                }
+            });
+
+            return false;
+        };
+
+    })
 
 .controller('HomeCtrl', function($scope, $ionicPopup) {
 
         $scope.isCollapsed = true;
-  //
-  //      $scope.cards = [
-  //  {day:"Monday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 1},
-  //  {day:"Tuesday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "yes"},
-  //  {day:"Wednesday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-  //  {day:"Thursday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-  //  {day:"Friday", title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 5},
-  //  {day:"Saturday", title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "no"},
-  //  {day:"Sunday", title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-  //  {day:"Monday", title:'Bristol Harbour Festival', avatarImg:"events/CCL.png", coverImg:"events/4.png", location: "The Grove, BS1 4RB Bristol, United Kingdom", venue:"Thekla, Bristol", date:"18th - 19th July", coverURL:"https://www.facebook.com/events/468824383280325/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"}
-  //];
-
-
-
 
         $scope.days = {
             day1: {
@@ -248,25 +301,13 @@ angular.module('starter.controllers',['ui.bootstrap'])
         };
 
 
-
-  //          $scope.Monday = [
-  //  {title:'Bristol Freshers', avatarImg:"img/bristolLogo.png", coverImg:"events/1.png", location: "Univerity of Bristol Campus", venue:"Anson Rooms", date:"27th Sep - 4th Oct", coverURL:"https://www.facebook.com/events/971419459536809/", avatarURL:"http://www.bris.ac.uk/", id: 1},
-  //  {title:'Sciences vs Arts Bar Crawl', avatarImg:"img/bristolLogo.png", coverImg:"events/2.jpg", location: "The South Buildings, Canons Road, BS15UH, Bristol", venue:"Pryzm Nightclub", date:"Tuesday 6 October at 20:00 - 04:00 ", coverURL:"https://www.facebook.com/events/1556319957955080/", avatarURL:"http://www.bris.ac.uk/", additionalEventOccurrence: "yes"},
-  //  {title:'Arcadia Bristol', avatarImg:"events/CCL.png", coverImg:"events/3.jpg", location: "Queen Square, BS1 4LH Bristol, United Kingdom", venue:"Queen Square, Bristol", date:"4th - 5th September", coverURL:"https://www.facebook.com/events/865692610181537/", avatarURL:"https://www.facebook.com/groups/521020464709928/?fref=ts", additionalEventOccurrence: "no"},
-  //];
-
-
-
-
-
-
       //Device selection for Maps integration.
-      $scope.changeLinkMaps = function (location){
+        $scope.changeLinkMaps = function (location){
         var devicePlatform = device.platform;
         var mapRoot = location + ", UK";
 
         var confirmPopup = $ionicPopup.confirm({
-              title: 'Open in browser',
+              title: 'Open Maps?',
               cancelText: 'Cancel',
               okText: 'Ok'
         });
@@ -293,7 +334,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
       };
 
       //Add to config.xml for appAvailability plugin ->>> <gap:plugin name="com.ohh2ahh.plugins.appavailability" />
-      $scope.changeLinkImages = function(URL){
+        $scope.changeLinkImages = function(URL){
           //console.log("here");
         //var scheme  = 'fb://';
         //appAvailability.check(scheme,       // URI Scheme or Package Name
@@ -306,7 +347,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
 
           var confirmPopup = $ionicPopup.confirm({
-              title: 'Open in browser',
+              title: 'Open Facebook?',
               cancelText: 'Cancel',
               okText: 'Ok'
           });
@@ -354,8 +395,6 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
         }
 
-
-
 })
 
 .controller('phoneCtrl', function($scope, $ionicPopup) {
@@ -383,6 +422,8 @@ angular.module('starter.controllers',['ui.bootstrap'])
         }
 
 });
+
+
 
 var openLink = function (URL){
 
