@@ -20,6 +20,7 @@ Michael Cooper
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
   <gap:plugin name="org.apache.cordova.device"/>
   <gap:plugin name="nl.x-services.plugins.calendar" />
+  <gap:plugin name="com.pushbots.push" version="1.2.3" source="plugins.cordova.io" />
   <platform name="ios">
     <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
     <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
