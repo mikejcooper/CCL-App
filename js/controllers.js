@@ -61,6 +61,30 @@ angular.module('starter.controllers',['ui.bootstrap'])
             $scope.showModal();
             infoBoxOpened = true;
         }
+
+
+
+        document.addEventListener('deviceready', function () {
+            // Enable to debug issues.
+            // window.plugins.OneSignal.setLogLevel({logLevel: 4, visualLevel: 4});
+
+            console.log("PUSH MESSAGE");
+
+            var notificationOpenedCallback = function(jsonData) {
+                console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
+            };
+
+            window.plugins.OneSignal.init("c0188d98-4a48-11e5-bcbb-a71ac7fabb2a",
+                {googleProjectNumber: "1071552359129"},
+                notificationOpenedCallback);
+
+            // Show an alert box if a notification comes in when the user is in your app.
+            window.plugins.OneSignal.enableInAppAlertNotification(true);
+        }, false);
+
+
+
+
 })
 
 

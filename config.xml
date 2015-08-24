@@ -21,9 +21,8 @@ Michael Cooper
   <!--<gap:plugin name="org.apache.cordova.splashscreen" />.-->
   <gap:plugin name="org.apache.cordova.device"/>
   <gap:plugin name="nl.x-services.plugins.calendar" />
-  <gap:plugin name="com.phonegap.plugins.pushplugin" version="2.1.1" />
-  <gap:plugin name="com.pushbots.push" version="1.2.3" source="plugins.cordova.io" />
-  <gap:splash src="splash.png" />
+  <gap:plugin name="com.onesignal.plugins.onesignal" />
+
   <platform name="ios">
     <icon src="resources/ios/icon/icon.png" width="57" height="57"/>
     <icon src="resources/ios/icon/icon@2x.png" width="114" height="114"/>
@@ -72,5 +71,6 @@ Michael Cooper
     <splash src="resources/android/splash/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="resources/android/splash/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+
   <icon src="resources/android/icon/drawable-xhdpi-icon.png"/>
 </widget>
