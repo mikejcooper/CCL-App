@@ -84,7 +84,7 @@ img{
     padding-left: 7px;
 }
 .paddingLeft2{
-    padding-left: 3px;
+    padding-left: 1vw;
 }
 
 .venueTop{
@@ -100,8 +100,8 @@ img{
 
 .venueTopRight{
     position: absolute;
-    margin-top: -4.5%;
-    margin-left: 54%;
+    top: 40px;
+    right: 10px;
     font-size: 13px;
 
 }

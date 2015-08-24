@@ -71,6 +71,8 @@ angular.module('starter.controllers',['ui.bootstrap'])
             console.log("PUSH MESSAGE");
 
             var notificationOpenedCallback = function(jsonData) {
+
+
                 console.log('didReceiveRemoteNotificationCallBack: ' + JSON.stringify(jsonData));
             };
 
