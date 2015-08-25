@@ -10,6 +10,13 @@ angular.module('starter.controllers',['ui.bootstrap'])
 .controller('AppCtrl', function($scope, $modal, $ionicModal) {
 
 
+        $scope.$on('$ionicView.loaded', function() {
+            ionic.Platform.ready( function() {
+                if(navigator && navigator.splashscreen) navigator.splashscreen.hide();
+            });
+        });
+
+
 
 
         $ionicModal.fromTemplateUrl('templates/welcomePopup.html', {
