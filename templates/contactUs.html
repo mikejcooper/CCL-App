@@ -13,37 +13,54 @@
   <ion-content>
     <div class = "body" ng-controller="phoneCtrl">
 
-        <b>
-        Senior resident (duty mobile):
-        </b>
-        <br/>
-
-        <span> Unite House -
-        <a class = "link" ng-click = 'showConfirm("07717701058","University Security")'>07717701058</a>
-        </span>
-
-        <br/>
-
-        <span> Colston Street: -
-        <a class = "link" ng-click = 'showConfirm("07815700570","University Security")'>07815700570</a>
-        </span>
+        <button class="button button-positive phoneButton link" ng-click = 'showConfirm("07717701058","Senior resident - Unite House")'>
+            <i class="ion-ios-telephone phoneIcon"></i>
+            Senior resident (Unite House)
+        </button>
 
         <br/><br/>
+        <br/><br/>
 
-        <span> University Security -
-        <a class = "link" ng-click = 'showConfirm("0117 928 7848","University Security")'>0117 928 7848</a>
-        </span>
+        <button class="button button-positive phoneButton link" ng-click = 'showConfirm("07815700570","Senior resident - Colston Street")'>
+            <i class="ion-ios-telephone phoneIcon"></i>
+            Senior resident (Colston Street)
+        </button>
 
-        <br/>
-        <br/>
-        <span> Security Services <b>Website</b>:
-        <div class = "link" ng-controller="HomeCtrl"> <a ng-click = "changeLinkImages('https://www.bristol.ac.uk/securityservices/','contact')">http://www.bristol.ac.uk/securityservices/ </a></div>
-        </span>
+        <br/><br/>
+        <br/><br/>
+
+        <button class="button button-positive phoneButton link" ng-click = 'showConfirm("0117 928 7848","University Security")'>
+        <i class="ion-ios-telephone phoneIcon"></i>
+            University Security
+        </button>
+
+        <br/><br/>
+        <br/><br/>
+
+        <button class="button button-calm button-positive phoneButton link" ng-controller="HomeCtrl" ng-click = "changeLinkImages('https://www.bristol.ac.uk/securityservices/','contact')">
+        <i class="ion-earth phoneIcon"></i>
+            Security Services
+            <!-- FIX "Open Facebook?-->
+        </button>
+
+        <br/><br/>
+        <br/><br/>
+
+        <button class="button button-calm button-positive phoneButton link" ng-controller="HomeCtrl" ng-click = "changeLinkImages('https://www.bristol.ac.uk/','contact')">
+        <i class="ion-earth phoneIcon"></i>
+            University Website
+        </button>
+
+        <br/><br/>
+        <br/><br/>
+
+        <!--<button class="button button-positive phoneButton link" ng-controller="HomeCtrl" ng-click = "changeLinkImages('https://www.bristol.ac.uk/securityservices/','contact')">-->
+        <!--<i class="ion-earth phoneIcon"></i>-->
+            <!--Application Feedback-->
+            <!-- -->
+        <!--</button>-->
+
       </div>
-
-
-
-
     </ion-content>
   </ion-view>
 </body>

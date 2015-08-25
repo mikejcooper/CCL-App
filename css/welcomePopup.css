@@ -1,41 +1,40 @@
-.xButton {
-    position: absolute;
-    top: -2px;
-    right: 5px;
-    font-size: 20px;
+
+
+.modal {
+    text-align: center;
+    padding: 15%;
+    z-index: 1050;
+    padding-top: 30%;
+    padding-bottom: 40%;
+    background-color: rgba(235, 227, 250, 0.5);
 }
 
-
-
-/*.modal {*/
-    /*text-align: center;*/
+/*.modal:before {*/
+    /*display: inline-block;*/
+    /*vertical-align: middle;*/
+    /*horiz-align: center;*/
+    /*content: " ";*/
+    /*height: 100%;*/
 /*}*/
 
-.modal:before {
-    display: inline-block;
-    vertical-align: middle;
-    horiz-align: center;
-    content: " ";
-    height: 100%;
-}
+/*.modal-dialog {*/
+    /*display: inline-block;*/
+    /*text-align: left;*/
+    /*vertical-align: middle;*/
+    /*horiz-align: center;*/
+/*}*/
 
-.modal-dialog {
-    display: inline-block;
-    text-align: left;
-    vertical-align: middle;
-    horiz-align: center;
-}
-
-.center-modal {
-    position: absolute;
-    padding: 15%;
-    padding-top: 60px;
-    padding-bottom: 30%
-    z-index: 1050;
-    max-width: 100%;
-    height: 80%;
-    background: transparent;
-}
+/*.center-modal {*/
+    /*position: absolute;*/
+    /*padding: 15%;*/
+    /*padding-top: 60px;*/
+    /*padding-bottom: 30%*/
+    /*z-index: 1050;*/
+    /*max-width: 100%;*/
+    /*height: 80%;*/
+    /*/!*background: transparent;*!/*/
+    /*background-color: rgba(235, 227, 250, 0.5);*/
+/*}*/
 
 #header {
     background-color: #000000;
@@ -59,3 +58,4 @@
     border-color: black;
     overflow:auto;
 }
+

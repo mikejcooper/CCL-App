@@ -7,60 +7,38 @@ angular.module('starter.controllers',['ui.bootstrap'])
     })
 
 
-.controller('AppCtrl', function($scope, $modal) {
+.controller('AppCtrl', function($scope, $modal, $ionicModal) {
 
 
 
 
-        // UI bootstrap modal code
-        $scope.showModal = function() {
-
-            $scope.opts = {
-                backdrop: true,
-                backdropClick: true,
-                dialogFade: false,
-                keyboard: true,
-                templateUrl : '../templates/welcomePopup.html',
-                controller : ModalInstanceCtrl,
-                resolve: {}, // empty storage
-                windowClass: 'center-modal'
-            };
-
-
-            $scope.opts.resolve.item = function() {
-                return angular.copy(
-                    {name: $scope.name}
-                ); // pass name to resolve storage
-            };
-
-            var modalInstance = $modal.open($scope.opts);
-
-            modalInstance.result.then(function(){
-                //on ok button press
-                console.log("Modal cancel");
-            },function(){
-                //on cancel button press
-                console.log("Modal closed");
-            });
+        $ionicModal.fromTemplateUrl('templates/welcomePopup.html', {
+            scope: $scope,
+            animation: 'slide-in-up',
+        }).then(function(modal) {
+            $scope.modal = modal;
+            $scope.openModal()
+        });
+        $scope.openModal = function() {
+            $scope.modal.show();
         };
-        var ModalInstanceCtrl = function($scope, $modalInstance, $modal, item) {
-            $scope.item = item;
-
-            $scope.ok = function () {
-                $modalInstance.close();
-                console.log("ok()");
-            };
-
-            $scope.cancel = function () {
-                $modalInstance.close();
-                console.log("cancel()");
-            };
+        $scope.closeModal = function() {
+            $scope.modal.hide();
         };
-        //open welcomePopup
-        if (!infoBoxOpened){
-            $scope.showModal();
-            infoBoxOpened = true;
-        }
+        //Cleanup the modal when we're done with it!
+        $scope.$on('$destroy', function() {
+            console.log('destroy');
+            $scope.modal.remove();
+        });
+        // Execute action on hide modal
+        $scope.$on('modal.hidden', function() {
+            // Execute action
+        });
+        // Execute action on remove modal
+        $scope.$on('modal.removed', function() {
+            // Execute action
+        });
+
 
 
 
@@ -159,7 +137,8 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
     })
 
-.controller('HomeCtrl', function($scope, $ionicPopup) {
+.controller('HomeCtrl', function($scope, $ionicPopup, $ionicModal) {
+
 
         $scope.isCollapsed = true;
 
@@ -427,7 +406,11 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
 })
 
-.controller('phoneCtrl', function($scope, $ionicPopup) {
+.controller('phoneCtrl', function($scope, $ionicPopup, $ionicModal) {
+
+
+
+
 
         $scope.showConfirm = function(phoneNumber, id) {
             //console.log("hello");
@@ -451,6 +434,8 @@ angular.module('starter.controllers',['ui.bootstrap'])
             });
         }
 
+
+
 });
 
 
@@ -473,4 +458,74 @@ var openLink = function (URL){
     return false;
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// UI bootstrap modal code
+//$scope.showModal = function() {
+//
+//    $scope.opts = {
+//        backdrop: true,
+//        backdropClick: true,
+//        dialogFade: false,
+//        keyboard: true,
+//        templateUrl : '../templates/welcomePopup.html',
+//        controller : ModalInstanceCtrl,
+//        resolve: {}, // empty storage
+//        windowClass: 'center-modal'
+//    };
+//
+//
+//    $scope.opts.resolve.item = function() {
+//        return angular.copy(
+//            {name: $scope.name}
+//        ); // pass name to resolve storage
+//    };
+//
+//    var modalInstance = $modal.open($scope.opts);
+//
+//    modalInstance.result.then(function(){
+//        //on ok button press
+//        console.log("Modal cancel");
+//    },function(){
+//        //on cancel button press
+//        console.log("Modal closed");
+//    });
+//};
+//
+//
+//
+//var ModalInstanceCtrl = function($scope, $modalInstance, $modal, item) {
+//    $scope.item = item;
+//
+//    $scope.ok = function () {
+//        $modalInstance.close();
+//        console.log("ok()");
+//    };
+//
+//    $scope.cancel = function () {
+//        $modalInstance.close();
+//        console.log("cancel()");
+//    };
+//};
+////open welcomePopup
+//if (!infoBoxOpened){
+//    $scope.showModal();
+//    infoBoxOpened = true;
+//}
 

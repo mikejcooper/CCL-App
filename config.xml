@@ -8,6 +8,7 @@
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="AutoHideSplashScreen" value="false" />
   <name>CCL-Freshers</name>
   <description>
         Bristol University Freshers Week Project - City Centre Living
@@ -18,10 +19,11 @@ Michael Cooper
   <content src="index.html"/>
   <access origin="*"/>
   <gap:plugin name="org.apache.cordova.inappbrowser"/>
-  <!--<gap:plugin name="org.apache.cordova.splashscreen" />.-->
+  <gap:plugin name="org.apache.cordova.splashscreen" />.
   <gap:plugin name="org.apache.cordova.device"/>
   <gap:plugin name="nl.x-services.plugins.calendar" />
   <gap:plugin name="com.onesignal.plugins.onesignal" />
+
 
   <platform name="ios">
     <icon src="resources/ios/icon/icon.png" width="57" height="57"/>

@@ -1,3 +1,4 @@
+
 <html>
 
 <head>
@@ -6,13 +7,13 @@
 
 </head>
 
-<body ng-controller="HomeCtrl" ng-click = "ok()">
-<div ng-click = "ok()">
+<body ng-controller="HomeCtrl" ng-click = "closeModal()">
+<div class = "modal" ng-click = "closeModal()">
 
 <div class = "border">
-    <div id="header" ng-click = "ok()">
+    <div id="header" ng-click = "closeModal()">
         <div>Welcome to City Centre Living!</div>
-        <span class = "xButton" ng-click = "ok()"><ion class="ion-android-close"></ion></span>
+        <!--<span class = "xButton" ng-click = "closeModal()"><ion class="ion-android-close"></ion></span>-->
 
 
     </div>
@@ -24,27 +25,15 @@
         This app allows you to browse information about what's on during Welcome Week.
         You can see who your Senior Residents are and how to contact them, what a JCR is and how to get involved, and links to all sorts of other useful information.
         </p><p>
-        If you have any questions you can always <a class = "link" menu-close href="#/app/contactUs" ng-click="ok()">contact us.</a>
+        If you have any questions you can always <a class = "link" menu-close href="#/app/contactUs" ng-click="closeModal()">contact us.</a>
         </p><p>
         Have a great Welcome Week!
         </p>
     </div>
-    <button class="button button-block button-dark" ng-click="registerWithPushService()">
-        Register with Push Service
-    </button>
 </div>
 
 </div>
 </body>
 </html>
 
-<!--<div class = "main" ng-click = "ok()" ng-controller="HomeCtrl">-->
 
-
-<!--<ion-header-bar class="bar bar-header">-->
-    <!--<span class = "xButton" ng-click = "ok()"><ion class="ion-android-close"></ion></span>-->
-    <!--<div class="title1"></div>-->
-<!--</ion-header-bar>-->
-<!--<div class = 'content'>-->
-
-<!--</div>-->

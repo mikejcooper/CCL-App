@@ -14,10 +14,8 @@
     <ion-content ng-controller="HallCtrl">
         <ion-list ng-repeat = "hall in halls" >
             <ion-item class = "display1" ng-click="openLink(hall.hallURL)">
-
                 <img class = "hallIMG" src={{hall.imgURL}}>
                 <div class = "header">{{hall.name}}</div>
-
             </ion-item>
         </ion-list>
     </ion-content>

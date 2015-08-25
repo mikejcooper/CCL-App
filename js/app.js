@@ -17,20 +17,6 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.bootstrap'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
-
-
-
-    //Push Notifications
-    if (PushbotsPlugin.isAndroid()) {
-      PushbotsPlugin.initializeAndroid('55d1be871779590e208b4567', '1071552359129');
-      console.log("push android");
-
-    } else if (PushbotsPlugin.isiOS()) {
-      PushbotsPlugin.initializeiOS('55d1be871779590e208b4567');
-      console.log("push ios");
-    }
-
   });
 })
 
