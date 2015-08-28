@@ -7,7 +7,6 @@
     height:auto;
     border: transparent;
     position: relative;
-
 }
 
 .hallIMG {
@@ -15,7 +14,7 @@
     max-height: 20%;
     max-width: 100%;
     width: 100%;
-    height: auto;
+    height: 40vw;
     border-bottom: groove;
     border-top: groove;
     border-width: 1px;
