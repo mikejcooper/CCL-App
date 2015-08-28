@@ -12,7 +12,7 @@
   <preference name="FadeSplashScreen" value="true" />
   <preference name="FadeSplashScreenDuration" value="1.0" />
   <preference name="Orientation" value="portrait" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, targetdensity-dpi=120dpi"/>
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1, targetdensity-dpi=120dpi"/>-->
   <name>CCL-Freshers</name>
   <description>
         Bristol University Freshers Week Project - City Centre Living
@@ -28,8 +28,8 @@
   <gap:plugin name="nl.x-services.plugins.calendar"/>
   <gap:plugin name="com.onesignal.plugins.onesignal"/>
 
-  <gap:splash src="resources/ios/splash/Default-568h@2x~iphone.png" gap:platform="ios" width="320" height="480" />
-  <gap:splash src="resources/splash.png" />
+  <!--<gap:splash src="resources/ios/splash/Default-568h@2x~iphone.png" gap:platform="ios" width="320" height="480" />-->
+  <!--<gap:splash src="resources/splash.png" />-->
 
 
   <platform name="ios">
