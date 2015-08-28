@@ -26,9 +26,9 @@
                 <div class="card">
 
                     <!-- Top-->
-                    <div class="cardTop">
-                        <div class="item item-thumbnail-left" href="#">
-                            <a id = "avatar" ng-click="changeLinkImages(card.avatarURL, 'avatar')"><span class="avatar"><img src={{card.avatarImg}}></span></a>
+                    <div class="cardTop" style="background: transparent" >
+                        <div class="item item-thumbnail-left" style="background: transparent" href="#">
+                            <a id = "avatar" ng-click="changeLinkImages(card.avatarURL, 'avatar')"><span class="avatar"><img class="imgAvatar" src={{card.avatarImg}}></span></a>
                             <span class="cardTitle">{{card.title}}</span>
                             <br/>
                             <a class="venueTop" id = "maps" ng-click="changeLinkMaps(card.location)" >
@@ -41,7 +41,7 @@
                     </div>
                     <!-- Middle-->
                     <div class="item item-image coverDiv">
-                        <a id = "cover" ng-href="" ng-click = "changeLinkImages(card.coverURL, 'cover')"><span class="cardBottomImage"><img src={{card.coverImg}}></span></a>
+                        <a id = "cover" ng-href="" ng-click = "changeLinkImages(card.coverURL, 'cover')"><span class="cardBottomImage"><img class="imgCover" src={{card.coverImg}}></span></a>
                         <i class="icon custom-icon coverIcon ion-social-facebook"></i>
                     </div>
                     <!--dropdown list-->
@@ -51,12 +51,12 @@
                     </button>
                     <div collapse="isCollapsed">
                         <div>
-                            <div class="item item-icon-left assertive" ng-click = "calendarEvent()">
+                            <div style="background: transparent" class="item item-icon-left assertive" ng-click = "calendarEvent(card.time,card.title,card.location,card.dateCal)">
                                 <i class="icon ion-calendar"></i>
                                 {{card.date}}
                             </div>
                             <a class = "venueBottom" id = "maps2" ng-click="changeLinkMaps(card.location)" >
-                                <div class="item item-icon-left assertive">
+                                <div style="background: transparent" class="item item-icon-left assertive">
                                     <i class="icon ion-ios-location"></i>
                                     {{card.location}}
                                 </div>
