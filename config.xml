@@ -8,6 +8,8 @@
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="3000"/>
+  <preference name="target-device" value="universal" />
+  <preference name="orientation" value="portrait" />
   <name>CCL-Freshers</name>
   <description>
         Bristol University Freshers Week Project - City Centre Living
@@ -22,6 +24,7 @@ Michael Cooper
   <gap:plugin name="org.apache.cordova.device"/>
   <gap:plugin name="nl.x-services.plugins.calendar"/>
   <gap:plugin name="com.onesignal.plugins.onesignal"/>
+
   <platform name="android">
     <icon src="resources/android/icon/drawable-ldpi-icon.png" density="ldpi"/>
     <icon src="resources/android/icon/drawable-mdpi-icon.png" density="mdpi"/>
