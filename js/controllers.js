@@ -1,5 +1,5 @@
 var infoBoxOpened = false;
-angular.module('starter.controllers',['ui.bootstrap'])
+angular.module('starter.controllers',['ui.bootstrap', 'ngCordova'])
 
     .config(function($ionicConfigProvider) {
         //ion-nav-bar (menu) center on android
@@ -10,11 +10,9 @@ angular.module('starter.controllers',['ui.bootstrap'])
 .controller('AppCtrl', function($scope, $modal, $ionicModal) {
 
 
-
-
         $ionicModal.fromTemplateUrl('templates/welcomePopup.html', {
             scope: $scope,
-            animation: 'slide-in-up',
+            animation: 'slide-in-up'
         }).then(function(modal) {
             $scope.modal = modal;
             $scope.openModal()
@@ -64,7 +62,6 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
 
 
-
 })
 
 
@@ -82,34 +79,34 @@ angular.module('starter.controllers',['ui.bootstrap'])
                 hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
             },
             3: {
-                name: "Goldney",
-                imgURL: "hallsIMG/1.jpg",
-                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/goldney/"
+                name: "Wills Halls",
+                imgURL: "hallsIMG/Wills Hall.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/wills/"
             },
             4: {
-                name: "Clifton Hill House",
-                imgURL: "hallsIMG/2.jpg",
-                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
+                name: "Orchard Heights",
+                imgURL: "hallsIMG/Orchard Heights.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/orchard/"
             },
             5: {
-                name: "Goldney",
-                imgURL: "hallsIMG/1.jpg",
-                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/goldney/"
+                name: "Hiatt Baker",
+                imgURL: "hallsIMG/Hiatt Baker.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/hiatt-baker-self-catered/"
             },
             6: {
-                name: "Clifton Hill House",
-                imgURL: "hallsIMG/2.jpg",
-                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
+                name: "Culver",
+                imgURL: "hallsIMG/Culver.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/culver/"
             },
             7: {
-                name: "Goldney",
-                imgURL: "hallsIMG/1.jpg",
-                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/goldney/"
+                name: "Unite House",
+                imgURL: "hallsIMG/Unite House.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/unite/"
             },
             8: {
-                name: "Clifton Hill House",
-                imgURL: "hallsIMG/2.jpg",
-                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/clifton-hill/"
+                name: "Colston Street",
+                imgURL: "hallsIMG/Colston Street.jpg",
+                hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/colston-street/"
             }
 
 
@@ -137,172 +134,273 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
     })
 
-.controller('HomeCtrl', function($scope, $ionicPopup, $ionicModal) {
+.controller('HomeCtrl', function($scope, $ionicPopup, $cordovaCalendar) {
 
 
         $scope.isCollapsed = true;
 
         $scope.days = {
             day1: {
-                day: "Monday",
+                day: "Saturday 19th",
                 events: {
                     event1: {
-                        title: 'Bristol Freshers',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/1.png",
-                        location: "Univerity of Bristol Campus",
-                        venue: "Anson Rooms",
-                        date: "27th Sep - 4th Oct",
-                        time:'09:00',
-                        coverURL: "https://www.facebook.com/events/971419459536809/",
-                        avatarURL: "http://www.bris.ac.uk/"
-                    },
-                    event2: {
-                        title: 'Sciences vs Arts Bar Crawl',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/2.jpg",
-                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
-                        venue: "Pryzm Nightclub",
-                        date: "Tuesday 6 October",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/1556319957955080/",
-                        avatarURL: "http://www.bris.ac.uk/",
-                        additionalEventOccurrence: "yes"
-                    },
-                    event3: {
-                        title: 'Arcadia Bristol',
+                        title: 'Pizza Party / Scavenger Hunt',
                         avatarImg: "events/CCL.png",
-                        coverImg: "events/3.jpg",
-                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
-                        venue: "Queen Square, Bristol",
-                        date: "4th - 5th September",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/865692610181537/",
-                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
-                        additionalEventOccurrence: "no"
+                        coverImg: "events/Pizza.jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Nelson House",
+                        date: "Saturday 19th September",
+                        dateCal: "September 19",
+                        time:'19:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2522/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     }
                 }
             },
 
             day2: {
-                day: "Tuesday",
+                day: "Sunday 20th",
                 events: {
                     event1: {
-                        title: 'Bristol Freshers',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/1.png",
-                        location: "Univerity of Bristol Campus",
-                        venue: "Anson Rooms",
-                        date: "27th Sep - 4th Oct",
-                        time:'09:00',
-                        coverURL: "https://www.facebook.com/events/971419459536809/",
-                        avatarURL: "http://www.bris.ac.uk/"
+                        title: 'Bunker - Moving In Party',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Moving In Party.jpg",
+                        location: "Bunker, BS8 1QU, Bristol",
+                        venue: "Bunker, Clifton Triangle",
+                        date: "Sunday 20th September",
+                        dateCal: "September 20",
+                        time:'22:30',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2771/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     },
                     event2: {
-                        title: 'Sciences vs Arts Bar Crawl',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/2.jpg",
-                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
-                        venue: "Pryzm Nightclub",
-                        date: "Tuesday 6 October",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/1556319957955080/",
-                        avatarURL: "http://www.bris.ac.uk/",
-                        additionalEventOccurrence: "yes"
+                        title: 'Curry Night',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Curry Night (1).jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House, Common Room",
+                        date: "Sunday 20th September",
+                        dateCal: "September 20",
+                        time:'20:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2777/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     },
                     event3: {
-                        title: 'Arcadia Bristol',
+                        title: 'Unismart Talk (Unite/Culver)',
                         avatarImg: "events/CCL.png",
-                        coverImg: "events/3.jpg",
-                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
-                        venue: "Queen Square, Bristol",
-                        date: "4th - 5th September",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/865692610181537/",
-                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
-                        additionalEventOccurrence: "no"
+                        coverImg: "events/Unismart.jpg",
+                        location: "Anson Rooms, Bristol",
+                        venue: "Anson Rooms, Student Union",
+                        date: "Sunday 20th September",
+                        dateCal: "September 20",
+                        time:'17:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2756/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    },
+                    event4: {
+                        title: 'Unismart Talk (Orchard Heights)',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Unismart.jpg",
+                        location: "Anson Rooms, Bristol",
+                        venue: "Anson Rooms, Student Union",
+                        date: "Sunday 20th September",
+                        dateCal: "September 20",
+                        time:'15:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2523/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     }
                 }
             },
 
             day3: {
-                day: "Wednesday",
+                day: "Monday 21st",
                 events: {
-                    event1: {
-                        title: 'Bristol Freshers',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/1.png",
-                        location: "Univerity of Bristol Campus",
-                        venue: "Anson Rooms",
-                        date: "27th Sep - 4th Oct",
-                        time:'09:00',
-                        coverURL: "https://www.facebook.com/events/971419459536809/",
-                        avatarURL: "http://www.bris.ac.uk/"
+                    event3: {
+                        title: 'Bus Tour of Bristol',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/bus tour.jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Common Room",
+                        date: "Monday 21st September",
+                        dateCal: "September 21",
+                        time:'12:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2525/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     },
                     event2: {
-                        title: 'Sciences vs Arts Bar Crawl',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/2.jpg",
-                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
-                        venue: "Pryzm Nightclub",
-                        date: "Tuesday 6 October",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/1556319957955080/",
-                        avatarURL: "http://www.bris.ac.uk/",
-                        additionalEventOccurrence: "yes"
-                    },
-                    event3: {
-                        title: 'Arcadia Bristol',
+                        title: 'CCL Mixer',
                         avatarImg: "events/CCL.png",
-                        coverImg: "events/3.jpg",
-                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
-                        venue: "Queen Square, Bristol",
-                        date: "4th - 5th September",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/865692610181537/",
-                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
-                        additionalEventOccurrence: "no"
+                        coverImg: "events/Welcome Week General Image.jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Common Room",
+                        date: "Monday 21st September",
+                        dateCal: "September 21",
+                        time:'13:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2526/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    },
+                    event1: {
+                        title: 'O2 Academy - Future Takeover',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/o2.jpg",
+                        location: "O2 Academy, Bristol",
+                        venue: "O2 Academy, Bristol",
+                        date: "Monday 21st September",
+                        dateCal: "September 21",
+                        time:'22:30',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2649/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     }
                 }
             },
 
             day4: {
-                day: "Thursday",
+                day: "Tuesday 22nd",
                 events: {
-                    event1: {
-                        title: 'Bristol Freshers',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/1.png",
-                        location: "Univerity of Bristol Campus",
-                        venue: "Anson Rooms",
-                        date: "27th Sep - 4th Oct",
-                        time:'09:00',
-                        coverURL: "https://www.facebook.com/events/971419459536809/",
-                        avatarURL: "http://www.bris.ac.uk/"
+                    event3: {
+                        title: 'Courtyard Olympics',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/CCL Olympics (1).jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Courtyard",
+                        date: "Tuesday 22nd September",
+                        dateCal: "September 22",
+                        time:'12:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2527/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     },
                     event2: {
-                        title: 'Sciences vs Arts Bar Crawl',
-                        avatarImg: "img/bristolLogo.png",
-                        coverImg: "events/2.jpg",
-                        location: "The South Buildings, Canons Road, BS15UH, Bristol",
-                        venue: "Pryzm Nightclub",
-                        date: "Tuesday 6 October",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/1556319957955080/",
-                        avatarURL: "http://www.bris.ac.uk/",
-                        additionalEventOccurrence: "yes"
-                    },
-                    event3: {
-                        title: 'Arcadia Bristol',
+                        title: 'Lazer Fusion',
                         avatarImg: "events/CCL.png",
-                        coverImg: "events/3.jpg",
-                        location: "Queen Square, BS1 4LH Bristol, United Kingdom",
-                        venue: "Queen Square, Bristol",
-                        date: "4th - 5th September",
-                        time:'22:00',
-                        coverURL: "https://www.facebook.com/events/865692610181537/",
-                        avatarURL: "https://www.facebook.com/groups/521020464709928/?fref=ts",
-                        additionalEventOccurrence: "no"
+                        coverImg: "events/Laser Fusion.png",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Common Room",
+                        date: "Tuesday 22nd September",
+                        dateCal: "September 22",
+                        time:'18:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2526/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    },
+                    event1: {
+                        title: 'Movie Night',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Movie Night.JPG",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Common Room",
+                        date: "Tuesday 22nd September",
+                        dateCal: "September 22",
+                        time:'20:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2528/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    }
+                }
+            },
+
+            day4: {
+
+                day: "Wednesday 23rd",
+                events: {
+                    event3: {
+                        title: 'Walking Tour',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Walking Tours.jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Common Room",
+                        date: "Wednesday 23rd September",
+                        dateCal: "September 23",
+                        time:'12:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2529/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    },
+                    event2: {
+                        title: 'video Games Night',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Gaming (1).jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Common Room",
+                        date: "Wednesday 23rd September",
+                        dateCal: "September 23",
+                        time:'19:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2530/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    },
+                    event1: {
+                        title: 'SWX - Phresh Prince',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/SWX.jpg",
+                        location: "BS1 2JY, Bristol",
+                        venue: "SWX Bristol",
+                        date: "Wednesday 23rd September",
+                        dateCal: "September 23",
+                        time:'22:30',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2697/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    }
+                }
+            },
+
+            day4: {
+
+                day: "Thursday 24th",
+                events: {
+                    event3: {
+                        title: 'Street Art Tour and Workshop',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Banksy.jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Common Room",
+                        date: "Thursday 24th September",
+                        dateCal: "September 24",
+                        time:'12:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2531/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    },
+                    event2: {
+                        title: 'The Lanes',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Bowling (1).jpg",
+                        location: "The Lanes, Bristol",
+                        venue: "The Lanes, Bristol",
+                        date: "Thursday 24th September",
+                        dateCal: "September 24",
+                        time:'15:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2532/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    }
+                }
+            },
+
+            day5: {
+                day: "Friday 25th",
+                events: {
+                    event3: {
+                        title: 'Lakota - Apocalypse One',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/CCL Olympics (1).jpg",
+                        location: "Lakota, Bristol",
+                        venue: "Lakota, BS2 8QN, Bristol",
+                        date: "Friday 25th September",
+                        dateCal: "September 25",
+                        time:'22:30',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2714/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
+                    }
+                }
+            },
+            day6: {
+                day: "Saturday 26th",
+                events: {
+                    event3: {
+                        title: 'The Big City Chill',
+                        avatarImg: "events/CCL.png",
+                        coverImg: "events/Bristol SU Welcome Fair.jpg",
+                        location: "Unite House, Bristol",
+                        venue: "Unite House - Courtyard",
+                        date: "Saturday 26th September",
+                        dateCal: "September 26",
+                        time:'12:00',
+                        coverURL: "https://www.bristolsu.org.uk/ents/event/2749/",
+                        avatarURL: "https://www.facebook.com/citycentreliving?fref=ts"
                     }
                 }
             }
@@ -356,7 +454,7 @@ angular.module('starter.controllers',['ui.bootstrap'])
 
 
           var confirmPopup = $ionicPopup.confirm({
-              title: 'Open Facebook?',
+              title: 'Open UoB Website?',
               cancelText: 'Cancel',
               okText: 'Ok'
           });
@@ -373,7 +471,16 @@ angular.module('starter.controllers',['ui.bootstrap'])
         return false;
       };
 
-        $scope.calendarEvent = function() {
+        $scope.calendarEvent = function(start, title, location, date) {
+
+            start = start[0].concat(start[1]);
+            var end = (parseInt(start) + 1).toString();
+            date = date[10].concat(date[11]);
+
+
+            console.log(end);
+            console.log(start);
+            console.log(date);
 
             var confirmPopup = $ionicPopup.confirm({
                 title: 'Create Calendar Event?',
@@ -390,16 +497,34 @@ angular.module('starter.controllers',['ui.bootstrap'])
                 }
             });
 
+
             createCalendarEvent = function() {
 
-                var startDate = new Date("July 25, 2015 13:00:00");
-                var endDate = new Date("July 25, 2015 14:30:00");
-                var title = "My nice event";
-                var location = "Home";
-                var notes = "Some notes about this event.";
+                $cordovaCalendar.createEvent({
+                    title: title,
+                    location: location,
+                    notes: '',
+                    startDate: new Date(2015, 8, date, start, 0, 0, 0, 0),
+                    endDate: new Date(2015, 8, date, end, 0, 0, 0, 0)
+                }).then(function (result) {
+                    console.log("Event created successfully");
+                }, function (err) {
+                    console.error("There was an error: " + err);
+                });
 
-                // create (the only function also supported on Android for now)
-                window.plugins.calendar.createEvent(title, location, notes, startDate, endDate, success, error);
+
+                //var dateTemp = (date.concat(", 2015 ")).toString();
+                //
+                //var startDate = new Date(dateTemp.concat(start));
+                //var endDate = new Date(dateTemp.concat(end));
+                //var title = title;
+                //var location = location;
+                //var notes = "";
+                //
+                //
+                //
+                //// create (the only function also supported on Android for now)
+                //$cordovaCalendar.createEvent(title, location, notes, startDate, endDate, success, error);
             }
 
         }
