@@ -8,7 +8,10 @@
   <preference name="BackupWebStorage" value="none"/>
   <preference name="SplashScreen" value="splash"/>
   <preference name="SplashScreenDelay" value="3000"/>
-  <preference name="target-device" value="handset" />
+    <preference name="ShowSplashScreenSpinner" value="true" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="FadeSplashScreenDuration" value="1.0" />
+    <preference name="target-device" value="handset" />
   <preference name="orientation" value="portrait" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 

@@ -23,8 +23,13 @@
 
 
 .homeFrame{
-    padding-top: 11vw;
+    padding-top: 12vh;
     overflow: auto;
+}
+
+.day{
+    position: relative;
+    margin-top: -3vh;
 }
 
 .card{
@@ -71,25 +76,19 @@
     display: inline;
     font-size: 7vw !important;
     overflow: hidden;
+    position: relative;
+    left: 5vw;
 }
 
 .cardDay {
 
+    position: relative;
+    left: 5vw;
     display: inline;
     font-size: 7vw;
 }
-.reduceDiv{
-    border: transparent;
-    width: 100%;
-    background: transparent;
-    overflow:visible;
-    position: absolute;
-    left: -6%;
-    display: block;
-}
 
 .slideBox{
-    padding-top: 7%;
     padding-bottom: 5%;
 
 }

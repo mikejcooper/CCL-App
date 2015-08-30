@@ -14,10 +14,10 @@
 
 
         <ion-list ng-controller="HomeCtrl as settings" ng-repeat-start="day in days" href="#/app/home/{{}}">
-            <div class="background reduceDiv item item-thumbnail-left" href="#">
-                <span class="icon ion-ios-calendar-outline cardCalendar"></span>
-                <span class="cardDay">{{day.day}}</span>
-            </div>
+          <div class = "day">
+
+                <i class="icon ion-ios-calendar-outline cardCalendar"></i>
+                <div class="cardDay">{{day.day}}</div>
             <ion-slide-box class = "slideBox">
             <ion-slide ng-controller="HomeCtrl as settings" ng-repeat="card in day.events" href="#/app/home/{{}}">
 
@@ -67,6 +67,7 @@
 
             </ion-slide>
             </ion-slide-box>
+          </div>
         </ion-list>
 
         <div  ng-repeat-end class = "invisible">hello<br/></div>
