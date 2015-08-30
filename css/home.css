@@ -30,7 +30,7 @@
 .card{
     min-height:100%;
     border: groove;
-    margin-bottom: 12vw;
+    margin-bottom: 1.5em;
 }
 
 .cardTop{
@@ -68,27 +68,33 @@
 }
 
 .cardCalendar{
-    position: absolute;
-    top: -0.5vw;
-    left: 4vw;
+    display: inline;
     font-size: 7vw !important;
     overflow: hidden;
 }
 
 .cardDay {
+
+    display: inline;
     font-size: 7vw;
-    position: absolute;
-    top: 0.5vw;
-    left: 11vw;
 }
 .reduceDiv{
     border: transparent;
+    width: 100%;
     background: transparent;
-    margin-bottom: -21vw;
-    margin-top: -4vw;
-    z-index: -1000;
+    overflow:visible;
+    position: absolute;
+    left: -6%;
+    display: block;
+}
+
+.slideBox{
+    padding-top: 7%;
+    padding-bottom: 5%;
 
 }
+
+
 .paddingLeft{
     padding-left: 1vw;
 }
