@@ -13,8 +13,8 @@
 
     <ion-content ng-controller="HallCtrl">
         <ion-list ng-repeat = "hall in halls" >
-            <ion-item class = "display1" ng-click="openLink(hall.hallURL)">
-                <img class = "hallIMG" src={{hall.imgURL}}>
+            <ion-item class = "display1" ng-click="openLink(hall.hallURL)" ng-style="{'background-image':'url({{hall.imgURL}})'}" >
+                <!--<img class = "hallIMG" src={{hall.imgURL}}>-->
                 <div class = "header">{{hall.name}}</div>
             </ion-item>
         </ion-list>

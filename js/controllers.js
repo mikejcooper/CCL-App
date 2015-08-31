@@ -80,17 +80,17 @@ angular.module('starter.controllers',['ui.bootstrap', 'ngCordova'])
             },
             3: {
                 name: "Wills Halls",
-                imgURL: "hallsIMG/Wills Hall.jpg",
+                imgURL: "hallsIMG/WillsHall.jpg",
                 hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/wills/"
             },
             4: {
                 name: "Orchard Heights",
-                imgURL: "hallsIMG/Orchard Heights.jpg",
+                imgURL: "hallsIMG/OrchardHeights.jpg",
                 hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/orchard/"
             },
             5: {
                 name: "Hiatt Baker",
-                imgURL: "hallsIMG/Hiatt Baker.jpg",
+                imgURL: "hallsIMG/HiattBaker.jpg",
                 hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/hiatt-baker-self-catered/"
             },
             6: {
@@ -100,12 +100,12 @@ angular.module('starter.controllers',['ui.bootstrap', 'ngCordova'])
             },
             7: {
                 name: "Unite House",
-                imgURL: "hallsIMG/Unite House.jpg",
+                imgURL: "hallsIMG/UniteHouse.jpg",
                 hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/unite/"
             },
             8: {
                 name: "Colston Street",
-                imgURL: "hallsIMG/Colston Street.jpg",
+                imgURL: "hallsIMG/ColstonStreet.jpg",
                 hallURL: "http://www.bristol.ac.uk/accommodation/undergraduate/residences/colston-street/"
             }
 
