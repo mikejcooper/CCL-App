@@ -74,27 +74,27 @@
         <entry file="file://$PROJECT_DIR$/css/home.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+              <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="config.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.2778676">
-              <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="config2.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config2.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config2.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="62" selection-start-line="36" selection-start-column="2" selection-end-line="103" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.024232633">
+              <caret line="1" column="111" selection-start-line="1" selection-start-column="92" selection-end-line="1" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -585,12 +585,12 @@
       <workItem from="1440929660659" duration="2057000" />
       <workItem from="1440932420934" duration="7596000" />
       <workItem from="1440972675888" duration="2209000" />
-      <workItem from="1441039742697" duration="3677000" />
+      <workItem from="1441039742697" duration="3974000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76292000" />
+    <option name="totallyTimeSpent" value="76589000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -985,22 +985,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/home.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="62" selection-start-line="36" selection-start-column="2" selection-end-line="103" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.5">
@@ -1011,8 +995,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.2778676">
-          <caret line="94" column="64" selection-start-line="94" selection-start-column="64" selection-end-line="94" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="48" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.024232633">
+          <caret line="1" column="111" selection-start-line="1" selection-start-column="92" selection-end-line="1" selection-end-column="111" />
           <folding />
         </state>
       </provider>
