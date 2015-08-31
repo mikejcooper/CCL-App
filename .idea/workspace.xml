@@ -40,8 +40,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hallsOfResidence.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/hallsOfResidence.css">
+      <file leaf-file-name="HallsOfResidence.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/HallsOfResidence.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
@@ -83,8 +83,8 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.73344105">
-              <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.024232633">
+              <caret line="1" column="111" selection-start-line="1" selection-start-column="111" selection-end-line="1" selection-end-column="111" />
               <folding />
             </state>
           </provider>
@@ -577,12 +577,12 @@
       <workItem from="1440932420934" duration="7596000" />
       <workItem from="1440972675888" duration="2209000" />
       <workItem from="1441039742697" duration="4253000" />
-      <workItem from="1441055595517" duration="165000" />
+      <workItem from="1441055595517" duration="302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77033000" />
+    <option name="totallyTimeSpent" value="77170000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -834,7 +834,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/hallsOfResidence.css">
+    <entry file="file://$PROJECT_DIR$/css/HallsOfResidence.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
@@ -967,7 +967,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/hallsOfResidence.css">
+    <entry file="file://$PROJECT_DIR$/css/HallsOfResidence.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
@@ -993,8 +993,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73344105">
-          <caret line="71" column="13" selection-start-line="71" selection-start-column="13" selection-end-line="71" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.024232633">
+          <caret line="1" column="111" selection-start-line="1" selection-start-column="111" selection-end-line="1" selection-end-column="111" />
           <folding />
         </state>
       </provider>
