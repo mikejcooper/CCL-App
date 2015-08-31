@@ -83,8 +83,8 @@
       <file leaf-file-name="config.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.024232633">
-              <caret line="1" column="111" selection-start-line="1" selection-start-column="111" selection-end-line="1" selection-end-column="111" />
+            <state vertical-scroll-proportion="0.5815832">
+              <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
               <folding />
             </state>
           </provider>
@@ -577,12 +577,12 @@
       <workItem from="1440932420934" duration="7596000" />
       <workItem from="1440972675888" duration="2209000" />
       <workItem from="1441039742697" duration="4253000" />
-      <workItem from="1441055595517" duration="302000" />
+      <workItem from="1441055595517" duration="378000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77170000" />
+    <option name="totallyTimeSpent" value="77246000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -993,8 +993,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024232633">
-          <caret line="1" column="111" selection-start-line="1" selection-start-column="111" selection-end-line="1" selection-end-column="111" />
+        <state vertical-scroll-proportion="0.5815832">
+          <caret line="24" column="55" selection-start-line="24" selection-start-column="55" selection-end-line="24" selection-end-column="55" />
           <folding />
         </state>
       </provider>
