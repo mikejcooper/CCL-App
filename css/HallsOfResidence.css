@@ -1,21 +1,12 @@
 .display1 {
-    margin: 0;
     padding: 0;
-    max-height: 40%;
-    max-width: 100%;
-    width:100%;
-    height:auto;
-    border: transparent;
-    position: relative;
+
 
 }
 
 .hallIMG {
-    positon: absolute;
-    max-height: 100%;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
+    max-height: 100vh;
+    max-width: 100vw;
     border-bottom: groove;
     border-top: groove;
     border-width: 0.5px;
@@ -30,4 +21,39 @@
     font-weight: bold;
     font-size: large;
 }
+
+
+
+/*.display1 {*/
+    /*margin: 0;*/
+    /*padding: 0;*/
+    /*max-height: 40%;*/
+    /*max-width: 100%;*/
+    /*width:100%;*/
+    /*height:auto;*/
+    /*border: transparent;*/
+    /*position: relative;*/
+
+/*}*/
+
+/*.hallIMG {*/
+    /*positon: absolute;                  */
+    /*max-height: 100%;*/
+    /*max-width: 100%;*/
+    /*width: 100%;*/
+    /*height: auto;*/
+    /*border-bottom: groove;*/
+    /*border-top: groove;*/
+    /*border-width: 0.5px;*/
+/*}*/
+
+/*.header{*/
+    /*z-index: 1000;*/
+    /*position: absolute;*/
+    /*bottom: 15px;*/
+    /*left: 10px;*/
+    /*color:white;*/
+    /*font-weight: bold;*/
+    /*font-size: large;*/
+/*}*/
 
