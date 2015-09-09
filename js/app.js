@@ -43,15 +43,15 @@ angular.module('starter', ['ionic', 'starter.controllers','ui.bootstrap'])
       }
     }
   })
-      .state('app.hallsOfResidence', {
-    url: "/homeAlternative1",
-    views: {
-      'menuContent': {
-        templateUrl: "templates/hallsOfResidence.html",
-        controller: 'HomeCtrl'
-      }
-    }
-  })
+  //    .state('app.hallsOfResidence', {
+  //  url: "/homeAlternative1",
+  //  views: {
+  //    'menuContent': {
+  //      templateUrl: "templates/hallsOfResidence.html",
+  //      controller: 'HomeCtrl'
+  //    }
+  //  }
+  //})
 
 
   .state('app.contactUs', {
